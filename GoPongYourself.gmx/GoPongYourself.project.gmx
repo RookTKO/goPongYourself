@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\paddle</sprite>
+    <sprite>sprites\sprite1</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -14,10 +15,16 @@
     <script>scripts\paddle_creation.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\control</object>
-    <object>objects\playerControl</object>
-    <object>objects\aiControl</object>
-    <object>objects\paddleP1</object>
+    <objects name="Controls">
+      <object>objects\control</object>
+      <object>objects\playerControl</object>
+      <object>objects\aiControl</object>
+    </objects>
+    <objects name="Objects">
+      <object>objects\ball</object>
+      <object>objects\objPaddle</object>
+      <object>objects\object5</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

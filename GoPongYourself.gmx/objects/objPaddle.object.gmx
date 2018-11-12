@@ -48,6 +48,8 @@
           <argument>
             <kind>1</kind>
             <string>self.x = mouse_x;
+
+
 </string>
           </argument>
         </arguments>

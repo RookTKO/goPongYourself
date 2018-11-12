@@ -1,4 +1,4 @@
-if !instance_exists(paddleP1)
+if !instance_exists(objPaddle) && (control.state == state.game_start)
 {
-    instance_create(100, 800, paddleP1);
+    instance_create(100, 700, objPaddle);
 }
