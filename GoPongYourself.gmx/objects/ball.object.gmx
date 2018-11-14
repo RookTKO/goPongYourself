@@ -114,7 +114,7 @@ else
     ballSpeedBump = 0;
 }
 
-
+ballCritSpeed = 0;
 
 
 show_debug_message("ballSpeed: " + string(ballSpeed));
