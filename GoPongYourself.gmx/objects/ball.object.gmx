@@ -50,7 +50,7 @@ ballSpeedBump = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>101000000</string>
+            <string>010000000</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -77,11 +77,16 @@ ballSpeedBump = 0;
           <argument>
             <kind>1</kind>
             <string>///Artificial Gravity
-
-if (ballAngle &gt;= 145 || ballAngle &lt;= 35)
+//direction = ballAngle;
+/**
+if (ballAngle &gt;= 145)
 {
     ballAngle = ballAngle - 1;
     //direction = ballAngle;
+}
+else if ( ballAngle &lt;= 45)
+{
+    ballAngle = ballAngle + 1;
 }
 
 </string>
@@ -119,6 +124,7 @@ ballCritSpeed = 0;
 
 show_debug_message("ballSpeed: " + string(ballSpeed));
 show_debug_message("Speed: " + string(speed));
+show_debug_message("ballAngle: " + string(ballAngle));
 show_debug_message("ballAngle: " + string(ballAngle));
 </string>
           </argument>
@@ -169,11 +175,8 @@ show_debug_message("ballAngle: " + string(ballAngle));
           <argument>
             <kind>1</kind>
             <string>//TODO: add increase in speed based off the angle difference and 180(for left) and 0(for right)
-if  (other.y &gt; y)
-{
-    ballHit = true;
-    alarm[1] = 15;
-    
+
+
     if (other.x &gt; x)
     {
         ballDiff = (other.x - x) / (other.sprite_width/2);
@@ -200,7 +203,7 @@ if  (other.y &gt; y)
     {
         motion_set(90, ballSpeed)
     }
-}
+
 </string>
           </argument>
         </arguments>
