@@ -125,7 +125,63 @@ ballCritSpeed = 0;
 show_debug_message("ballSpeed: " + string(ballSpeed));
 show_debug_message("Speed: " + string(speed));
 show_debug_message("ballAngle: " + string(ballAngle));
-show_debug_message("ballAngle: " + string(ballAngle));
+show_debug_message("Self.x: " + string(self.x));
+show_debug_message("Paddle.x: " + string(objPaddle.x));
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//TODO: add increase in speed based off the angle difference and 180(for left) and 0(for right)
+
+if place_meeting(self.x, self.y, objPaddle)
+{
+    if (objPaddle.x &gt; x)
+    {
+        ballDiff = (objPaddle.x - x) / (objPaddle.sprite_width/2);
+        ballAngle = (135*ballDiff);
+        //Crit Hit - Increase Speed
+        
+        if (ballAngle &gt;= 135 &amp;&amp; ballAngle &lt;= 180)
+        {
+            ballCritSpeed = ((ballAngle - 45)/5);
+        }
+        
+        motion_set(ballAngle, ballSpeed + ballCritSpeed);
+    }
+    else if (objPaddle.x &lt; x) 
+    {
+        ballDiff = (x - objPaddle.x) / (objPaddle.sprite_width/2);
+        ballAngle = (45*ballDiff);
+        //Crit Hit - Increase Speed
+        
+        if (ballAngle &gt;= 0 &amp;&amp; ballAngle &lt;= 45)
+        {
+            ballCritSpeed = ((135 - ballAngle)/5);
+        }
+        
+        motion_set(ballAngle, ballSpeed + ballCritSpeed);
+    }
+    else if (objPaddle.x == x)
+    {
+        motion_set(90, ballSpeed)
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -153,58 +209,6 @@ show_debug_message("ballAngle: " + string(ballAngle));
           <argument>
             <kind>4</kind>
             <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objPaddle">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//TODO: add increase in speed based off the angle difference and 180(for left) and 0(for right)
-
-
-    if (other.x &gt; x)
-    {
-        ballDiff = (other.x - x) / (other.sprite_width/2);
-        ballAngle = (135*ballDiff);
-        //Crit Hit - Increase Speed
-        if (ballAngle &gt;= 135 &amp;&amp; ballAngle &lt;= 180)
-        {
-            ballCritSpeed = ((ballAngle - 45)/5);
-        }
-        motion_set(ballAngle, ballSpeed + ballCritSpeed);
-    }
-    else if (other.x &lt; x) 
-    {
-        ballDiff = (x - other.x) / (other.sprite_width/2);
-        ballAngle = (45*ballDiff);
-        //Crit Hit - Increase Speed
-        if (ballAngle &gt;= 0 &amp;&amp; ballAngle &lt;= 45)
-        {
-            ballCritSpeed = ((135 - ballAngle)/5);
-        }
-        motion_set(ballAngle, ballSpeed + ballCritSpeed);
-    }
-    else if (other.x == x)
-    {
-        motion_set(90, ballSpeed)
-    }
-
-</string>
           </argument>
         </arguments>
       </action>
