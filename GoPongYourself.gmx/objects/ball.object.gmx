@@ -109,7 +109,8 @@ else if ( ballAngle &lt;= 45)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (speed &gt; ballSpeed)
+            <string>///Reduce CritSpeed back to Norm
+if (speed &gt; ballSpeed)
 {
     ballSpeedBump = ballSpeedBump + 0.01;
     speed = speed - ballSpeedBump;;
@@ -122,11 +123,6 @@ else
 ballCritSpeed = 0;
 
 
-show_debug_message("ballSpeed: " + string(ballSpeed));
-show_debug_message("Speed: " + string(speed));
-show_debug_message("ballAngle: " + string(ballAngle));
-show_debug_message("Self.x: " + string(self.x));
-show_debug_message("Paddle.x: " + string(objPaddle.x));
 </string>
           </argument>
         </arguments>
@@ -148,12 +144,12 @@ show_debug_message("Paddle.x: " + string(objPaddle.x));
           <argument>
             <kind>1</kind>
             <string>//TODO: add increase in speed based off the angle difference and 180(for left) and 0(for right)
-
+/*
 if place_meeting(self.x, self.y, objPaddle)
 {
-    if (objPaddle.x &gt; x)
+    if (objPaddle.x &gt; self.x)
     {
-        ballDiff = (objPaddle.x - x) / (objPaddle.sprite_width/2);
+        ballDiff = (objPaddle.x - self.x) / (objPaddle.sprite_width/2);
         ballAngle = (135*ballDiff);
         //Crit Hit - Increase Speed
         
@@ -164,10 +160,14 @@ if place_meeting(self.x, self.y, objPaddle)
         
         motion_set(ballAngle, ballSpeed + ballCritSpeed);
     }
-    else if (objPaddle.x &lt; x) 
+    else if (objPaddle.x &lt; self.x) 
     {
-        ballDiff = (x - objPaddle.x) / (objPaddle.sprite_width/2);
+        ballDiff = (self.x - objPaddle.x) / (objPaddle.sprite_width/2);
         ballAngle = (45*ballDiff);
+        if (ballAngle &lt; 10)
+        {
+            ballAngle = 15;
+        }
         //Crit Hit - Increase Speed
         
         if (ballAngle &gt;= 0 &amp;&amp; ballAngle &lt;= 45)
@@ -177,11 +177,84 @@ if place_meeting(self.x, self.y, objPaddle)
         
         motion_set(ballAngle, ballSpeed + ballCritSpeed);
     }
-    else if (objPaddle.x == x)
+    else if (objPaddle.x == self.x)
+    {
+        motion_set(90, ballSpeed)
+    }
+}*/
+
+//TODO: add increase in speed based off the angle difference and 180(for left) and 0(for right)
+
+if place_meeting(self.x, self.y, objPaddle)
+{
+    if (objPaddle.x &gt; self.x)
+    {
+        ballDiff = (objPaddle.x - self.x) / (objPaddle.sprite_width/2);
+        ballAngle = ((100*ballDiff)+90);
+        //Adjust ball angle angle.
+        if (ballAngle &gt;= 165)
+        {
+            ballAngle = 165;
+        }        
+        //Crit Hit - Increase Speed
+        if (ballAngle &gt;= 160 &amp;&amp; ballAngle &lt;= 180)
+        {
+            ballCritSpeed = ((ballAngle - 45)/5);
+        }
+        
+        motion_set(ballAngle, ballSpeed + ballCritSpeed);
+    }
+    else if (objPaddle.x &lt; self.x) 
+    {
+        ballDiff = (self.x - objPaddle.x) / (objPaddle.sprite_width/2);
+        ballAngle = abs((100*ballDiff)-90);
+        //Adjust ball angle angle.
+        if (ballAngle &lt;= 15)
+        {
+            ballAngle = 15;
+        }        
+        //Crit Hit - Increase Speed
+        
+        if (ballAngle &gt;= 0 &amp;&amp; ballAngle &lt;= 25)
+        {
+            ballCritSpeed = ((135 - ballAngle)/5);
+        }
+        
+        motion_set(ballAngle, ballSpeed + ballCritSpeed);
+    }
+    else if (objPaddle.x == self.x)
     {
         motion_set(90, ballSpeed)
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Debug Console
+
+show_debug_message("ballSpeed: " + string(ballSpeed));
+show_debug_message("Speed: " + string(speed));
+show_debug_message("ballAngle: " + string(ballAngle));
+show_debug_message("Self.x: " + string(self.x));
+show_debug_message("Paddle.x: " + string(objPaddle.x));
+show_debug_message("dir.x: " + string(direction));
 </string>
           </argument>
         </arguments>
