@@ -30,6 +30,7 @@ ballDiff = 0;
 ballAngle = 0;
 ballCritSpeed = 0;
 ballSpeedBump = 0;
+ballDamage = 1;
 </string>
           </argument>
         </arguments>
@@ -76,19 +77,13 @@ ballSpeedBump = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Artificial Gravity
-//direction = ballAngle;
-/**
-if (ballAngle &gt;= 145)
-{
-    ballAngle = ballAngle - 1;
-    //direction = ballAngle;
-}
-else if ( ballAngle &lt;= 45)
-{
-    ballAngle = ballAngle + 1;
-}
+            <string>///Bounce &amp; CritSpeed
 
+ballBounce(objPaddleP1);
+if instance_exists(objPaddleAi)
+{
+    ballBounce(objPaddleAi);
+}
 </string>
           </argument>
         </arguments>
@@ -143,117 +138,12 @@ ballCritSpeed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//TODO: add increase in speed based off the angle difference and 180(for left) and 0(for right)
-/*
-if place_meeting(self.x, self.y, objPaddle)
-{
-    if (objPaddle.x &gt; self.x)
-    {
-        ballDiff = (objPaddle.x - self.x) / (objPaddle.sprite_width/2);
-        ballAngle = (135*ballDiff);
-        //Crit Hit - Increase Speed
-        
-        if (ballAngle &gt;= 135 &amp;&amp; ballAngle &lt;= 180)
-        {
-            ballCritSpeed = ((ballAngle - 45)/5);
-        }
-        
-        motion_set(ballAngle, ballSpeed + ballCritSpeed);
-    }
-    else if (objPaddle.x &lt; self.x) 
-    {
-        ballDiff = (self.x - objPaddle.x) / (objPaddle.sprite_width/2);
-        ballAngle = (45*ballDiff);
-        if (ballAngle &lt; 10)
-        {
-            ballAngle = 15;
-        }
-        //Crit Hit - Increase Speed
-        
-        if (ballAngle &gt;= 0 &amp;&amp; ballAngle &lt;= 45)
-        {
-            ballCritSpeed = ((135 - ballAngle)/5);
-        }
-        
-        motion_set(ballAngle, ballSpeed + ballCritSpeed);
-    }
-    else if (objPaddle.x == self.x)
-    {
-        motion_set(90, ballSpeed)
-    }
-}*/
-
-//TODO: add increase in speed based off the angle difference and 180(for left) and 0(for right)
-
-if place_meeting(self.x, self.y, objPaddle)
-{
-    if (objPaddle.x &gt; self.x)
-    {
-        ballDiff = (objPaddle.x - self.x) / (objPaddle.sprite_width/2);
-        ballAngle = ((100*ballDiff)+90);
-        //Adjust ball angle angle.
-        if (ballAngle &gt;= 165)
-        {
-            ballAngle = 165;
-        }        
-        //Crit Hit - Increase Speed
-        if (ballAngle &gt;= 160 &amp;&amp; ballAngle &lt;= 180)
-        {
-            ballCritSpeed = ((ballAngle - 45)/5);
-        }
-        
-        motion_set(ballAngle, ballSpeed + ballCritSpeed);
-    }
-    else if (objPaddle.x &lt; self.x) 
-    {
-        ballDiff = (self.x - objPaddle.x) / (objPaddle.sprite_width/2);
-        ballAngle = abs((100*ballDiff)-90);
-        //Adjust ball angle angle.
-        if (ballAngle &lt;= 15)
-        {
-            ballAngle = 15;
-        }        
-        //Crit Hit - Increase Speed
-        
-        if (ballAngle &gt;= 0 &amp;&amp; ballAngle &lt;= 25)
-        {
-            ballCritSpeed = ((135 - ballAngle)/5);
-        }
-        
-        motion_set(ballAngle, ballSpeed + ballCritSpeed);
-    }
-    else if (objPaddle.x == self.x)
-    {
-        motion_set(90, ballSpeed)
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>///Debug Console
 
 show_debug_message("ballSpeed: " + string(ballSpeed));
 show_debug_message("Speed: " + string(speed));
 show_debug_message("ballAngle: " + string(ballAngle));
 show_debug_message("Self.x: " + string(self.x));
-show_debug_message("Paddle.x: " + string(objPaddle.x));
 show_debug_message("dir.x: " + string(direction));
 </string>
           </argument>
@@ -282,6 +172,38 @@ show_debug_message("dir.x: " + string(direction));
           <argument>
             <kind>4</kind>
             <string>1</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (self.y &gt; room_height)
+{
+    objPaddleP1.hP -= ballDamage;
+    instance_destroy(self);
+}
+else if (self.y &lt; 0)
+{
+    //objPaddleAi.hp -= ballDamage;
+    instance_destroy(self);
+}
+</string>
           </argument>
         </arguments>
       </action>

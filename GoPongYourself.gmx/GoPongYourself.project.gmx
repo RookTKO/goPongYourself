@@ -12,7 +12,8 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\paddle_creation.gml</script>
+    <script>scripts\paddleCreation.gml</script>
+    <script>scripts\ballBounce.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Controls">
@@ -22,7 +23,8 @@
     </objects>
     <objects name="Objects">
       <object>objects\ball</object>
-      <object>objects\objPaddle</object>
+      <object>objects\objPaddleP1</object>
+      <object>objects\objPaddleAi</object>
       <object>objects\object5</object>
     </objects>
   </objects>
