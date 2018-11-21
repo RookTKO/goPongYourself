@@ -112,7 +112,16 @@ if (!instance_exists(ball))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(100, 100, "Player 1: " + string(objPaddleP1.hP));
+            <string>
+if (instance_exists(playerControl))
+{
+    draw_text(100, 100, "Player 1: " + string(objPaddleP1.hP));
+}
+if (instance_exists(aiControl))
+{
+    draw_text(100, 200, "Player AI: " + string(objPaddleAi.hP));
+}
+
 </string>
           </argument>
         </arguments>

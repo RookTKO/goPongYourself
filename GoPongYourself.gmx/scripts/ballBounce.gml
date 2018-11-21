@@ -1,5 +1,5 @@
 ///ballBounce(paddleType)
-var ySwitch = false;
+/*var ySwitch = false; 
 
 if (argument0 == objPaddleP1)
 {
@@ -15,11 +15,10 @@ else if (argument0 == objPaddleAi)
         ySwitch = true;
     }
 }
+*/ //Was causing ball to fall through
 
-
-if place_meeting(self.x, self.y, argument0) && (ySwitch)
+if place_meeting(self.x, self.y, argument0) //&& (ySwitch)
 {
-    self.speed = ballSpeed;
     if (argument0.x > self.x)
     {
     
