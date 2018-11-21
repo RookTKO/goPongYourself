@@ -1,7 +1,25 @@
 ///ballBounce(paddleType)
+var ySwitch = false;
 
-if place_meeting(self.x, self.y, argument0) //&& (self.y < argument0.y)
+if (argument0 == objPaddleP1)
 {
+    if (self.y < argument0.y)
+    {
+        ySwitch = true;
+    }
+}
+else if (argument0 == objPaddleAi)
+{
+    if (self.y > argument0.y)
+    {
+        ySwitch = true;
+    }
+}
+
+
+if place_meeting(self.x, self.y, argument0) && (ySwitch)
+{
+    self.speed = ballSpeed;
     if (argument0.x > self.x)
     {
     

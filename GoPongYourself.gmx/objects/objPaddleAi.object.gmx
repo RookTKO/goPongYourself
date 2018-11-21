@@ -62,8 +62,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.x = mouse_x;
+            <string>///Movement
 
+
+if self.bbox_left &lt; ball.x
+{
+    self.x += 10;
+}
+if self.bbox_right &gt; ball.x
+{
+    self.x -= 10;
+}
 </string>
           </argument>
         </arguments>
