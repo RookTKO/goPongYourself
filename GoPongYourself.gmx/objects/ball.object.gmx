@@ -79,17 +79,16 @@ ballDamage = 1;
             <kind>1</kind>
             <string>///Bounce &amp; CritSpeed
 
-/*
-if place_meeting(self.x, self.y+10, objPaddleP1)
+
+if (self.y+50 &gt;= objPaddleP1.y) &amp;&amp; direction &gt;= 180
 {
-    while !place_meeting(self.x, self.y, objPaddleP1) 
-    {
+
         if (speed &gt; ballSpeed)
         {
-            speed = ballSpeed;
+            speed = speed - 10;
         }
-    }
-}*/
+}
+
 
     ballBounce(objPaddleP1);
     if instance_exists(objPaddleAi)
@@ -129,6 +128,11 @@ else
 }
 
 ballCritSpeed = 0;
+
+if (speed &lt; ballSpeed)
+{
+    speed = ballSpeed;
+}
 
 
 </string>
