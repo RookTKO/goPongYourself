@@ -3,7 +3,7 @@
   <spriteName>sprCardBack</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,7 +28,7 @@
             <string>value = 1;
 index = instance_number(objCard);
 state = cardSpawnMovement;
-image_xscale = -1;
+image_xscale = 1;
 </string>
           </argument>
         </arguments>
@@ -74,12 +74,12 @@ image_xscale = -1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (image_xscale &gt; 0) {
-    draw_sprite_ext(sprCardFront, value-1, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+            <string>if (image_xscale &lt; 0) {
+    draw_self();    
 } 
 else
 {
-    draw_self();
+    draw_sprite_ext(sprCardFront, value-1, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 }
 </string>
           </argument>

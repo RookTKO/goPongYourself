@@ -24,8 +24,8 @@ switch (index) {
 
 if (x != tx ||  y != ty) {
 //Move
-    x = smoothApproach(x, tx, .1);
-    y = smoothApproach(y, ty, .1);
+    x = smoothApproach(x, tx, .05);
+    y = smoothApproach(y, ty, .05);
 //Flip
     var total_dis = point_distance(xstart, ystart, tx, ty);
     var dis = point_distance(x, y, tx, ty);
