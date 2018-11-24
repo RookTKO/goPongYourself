@@ -6,14 +6,17 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\paddle</sprite>
-    <sprite>sprites\sprite1</sprite>
+    <sprite>sprites\sprPaddle</sprite>
+    <sprite>sprites\sprBall</sprite>
+    <sprite>sprites\sprCard</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\paddleCreation.gml</script>
     <script>scripts\ballBounce.gml</script>
+    <script>scripts\cardSpawnMovement.gml</script>
+    <script>scripts\smoothApproach.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Controls">
@@ -23,9 +26,13 @@
     </objects>
     <objects name="Objects">
       <object>objects\ball</object>
-      <object>objects\objPaddleP1</object>
       <object>objects\objPaddleAi</object>
       <object>objects\object5</object>
+      <objects name="Player1H">
+        <object>objects\objPaddleP1</object>
+        <object>objects\objCard</object>
+        <object>objects\objDeck</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
