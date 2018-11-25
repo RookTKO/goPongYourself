@@ -49,16 +49,7 @@ mP = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Create Objects
-switch control.state
-{
-    case state.game_over:
-        break;
-    case state.game_start:
-        paddleCreation(400, 100, objPaddleAi);
-        break;
-}
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

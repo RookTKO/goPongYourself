@@ -82,13 +82,19 @@ game_speed = 60;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if state != 1{
-
-if (!instance_exists(ball))
-{
-    instance_create(room_width/2,room_height/2,ball);
-
-}
+            <string>
+switch state{
+    case 1:
+        break;
+    case 0:
+    paddleCreation(400, 700, objPaddleP1);
+        paddleCreation(400, 100, objPaddleAi);
+        if (!instance_exists(ball))
+        {
+            instance_create(room_width/2,room_height/2,ball);
+        
+        }
+        break;
 }
 </string>
           </argument>

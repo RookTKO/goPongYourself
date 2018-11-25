@@ -17,8 +17,13 @@
   <scripts name="scripts">
     <script>scripts\paddleCreation.gml</script>
     <script>scripts\ballBounce.gml</script>
-    <script>scripts\cardSpawnMovement.gml</script>
     <script>scripts\smoothApproach.gml</script>
+    <scripts name="Card Scripts">
+      <script>scripts\cardDrag.gml</script>
+      <script>scripts\cardSpawnState.gml</script>
+      <script>scripts\cardIdle.gml</script>
+      <script>scripts\cardBaseState.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Controls">
@@ -39,6 +44,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

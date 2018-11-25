@@ -27,8 +27,9 @@
             <kind>1</kind>
             <string>value = 1;
 index = instance_number(objCard);
-state = cardSpawnMovement;
+state = cardSpawnState;
 image_xscale = 1;
+hover_check = false;
 </string>
           </argument>
         </arguments>
@@ -79,7 +80,10 @@ image_xscale = 1;
 } 
 else
 {
+
     draw_sprite_ext(sprCardFront, value-1, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+    draw_set_colour(c_red);
+    draw_text(x, y, hover_check);
 }
 </string>
           </argument>

@@ -1,4 +1,4 @@
-///smooth_approach(current, target, speed[0-1])
+///smoothApproach(current, target, speed[0-1])
 var diff = argument1-argument0;
 if abs(diff) < 0.0005
 {
