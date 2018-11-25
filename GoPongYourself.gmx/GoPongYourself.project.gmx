@@ -11,6 +11,8 @@
     <sprite>sprites\sprCardDeck</sprite>
     <sprite>sprites\sprCardBack</sprite>
     <sprite>sprites\sprCardFront</sprite>
+    <sprite>sprites\sprCardLoadArea</sprite>
+    <sprite>sprites\sprMainPongArea</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -30,6 +32,10 @@
       <object>objects\control</object>
       <object>objects\playerControl</object>
       <object>objects\aiControl</object>
+      <objects name="GUI">
+        <object>objects\objMainArea</object>
+        <object>objects\objP1CardArea</object>
+      </objects>
     </objects>
     <objects name="Objects">
       <object>objects\ball</object>
