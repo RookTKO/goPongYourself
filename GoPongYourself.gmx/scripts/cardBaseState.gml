@@ -1,24 +1,24 @@
 ///
-var tx, ty = 544;
+var tx, ty = objDeck.y;
 switch (index) {
     case 1:
-        tx = 64;
+        tx = 640;
         break;
         
     case 2:
-        tx = 192;
+        tx = 800;
         break;
         
     case 3:
-        tx = 320;
+        tx = 960;
         break;
         
     case 4:
-        tx = 448;
+        tx = 1120;
         break;
         
     case 5:
-        tx = 576;
+        tx = 1280;
         break;
 }
 if (round(x) != tx ||  round(y) != ty) {

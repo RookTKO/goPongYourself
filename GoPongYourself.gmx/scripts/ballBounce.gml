@@ -54,7 +54,7 @@ if place_meeting(self.x, self.y, argument0) //&& (ySwitch)
             }
         }
 
-        
+        argument0.wP += 1;          
         return (motion_set(ballAngle, ballSpeed + ballCritSpeed));
     }
     else if (argument0.x < self.x) 
@@ -91,17 +91,19 @@ if place_meeting(self.x, self.y, argument0) //&& (ySwitch)
             }
         }
 
-        
+        argument0.wP += 1;         
         return (motion_set(ballAngle, ballSpeed + ballCritSpeed));
     }
     else if (argument0.x == self.x)
     {
         if (argument0 == objPaddleAi)
         {
+        argument0.wP += 1; 
             return (motion_set(270, ballSpeed));
         }
         else if (argument0 == objPaddleP1)
         {
+        argument0.wP += 1; 
             return (motion_set(90, ballSpeed));
         }
     }

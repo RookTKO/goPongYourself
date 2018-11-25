@@ -110,8 +110,8 @@ switch state{
     case 1:
         break;
     case 0:
-    paddleCreation(400, 700, objPaddleP1);
-        paddleCreation(400, 100, objPaddleAi);
+    paddleCreation((room_width/2), 800, objPaddleP1);
+    paddleCreation((room_width/2), 96, objPaddleAi);
         if (!instance_exists(ball))
         {
             instance_create(room_width/2,room_height/2,ball);
@@ -144,11 +144,12 @@ switch state{
             <string>
 if (instance_exists(playerControl))
 {
-    draw_text(100, 100, "Player 1: " + string(objPaddleP1.hP));
+    draw_text(96, 928, "Health Points: " + string(objPaddleP1.hP));
+    draw_text(1536, 928, "Warp Points: " + string(objPaddleP1.wP));
 }
 if (instance_exists(aiControl))
 {
-    draw_text(100, 200, "Player AI: " + string(objPaddleAi.hP));
+    draw_text((room_width/2), 32, "Player AI: " + string(objPaddleAi.hP));
 }
 
 </string>

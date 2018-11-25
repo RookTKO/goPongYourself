@@ -45,6 +45,7 @@
         <object>objects\objPaddleP1</object>
         <object>objects\objCard</object>
         <object>objects\objDeck</object>
+        <object>objects\objGraveyard</object>
       </objects>
     </objects>
   </objects>

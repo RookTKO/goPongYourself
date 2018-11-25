@@ -7,9 +7,10 @@ if (mouse_check_button_released(mb_left))
     else
     {**/
         state = cardBaseState;
-        hover_check = false;
-        control.card = false;
+
    // }
+           hover_check = false;
+        control.card = false;
 }
 x = smoothApproach(x, mouse_x, .3);
 y = smoothApproach(y, mouse_y, .3);
