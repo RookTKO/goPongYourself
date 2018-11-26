@@ -1,40 +1,40 @@
 [
   {
     "ID":0,
-    "NAME":"Big BALL0",
+    "NAME":"Two BALL0",
     "WPOINTS":1,
     "DESC":"NOTHING HERE0",
-    "EFFECT":"FALSE",
+    "EFFECT":"TRUE",
     "TYPE":"FALSE"
   },
   {
     "ID":1,
     "NAME":"Big BALL1",
-    "WPOINTS":1,
+    "WPOINTS":2,
     "DESC":"NOTHING HERE1",
     "EFFECT":"FALSE",
     "TYPE":"FALSE"
   },
   {
     "ID":2,
-    "NAME":"Big BALL2",
-    "WPOINTS":1,
+    "NAME":"SMALL PADDLE2",
+    "WPOINTS":3,
     "DESC":"NOTHING HERE2",
     "EFFECT":"FALSE",
     "TYPE":"FALSE"
   },
   {
     "ID":3,
-    "NAME":"Big BALL3",
-    "WPOINTS":1,
+    "NAME":"BRICKS3",
+    "WPOINTS":4,
     "DESC":"NOTHING HERE3",
     "EFFECT":"FALSE",
     "TYPE":"FALSE"
   },
    {
     "ID":4,
-    "NAME":"Big BALL4",
-    "WPOINTS":1,
+    "NAME":"4 SMALL BALS4",
+    "WPOINTS":5,
     "DESC":"NOTHING HERE4",
     "EFFECT":"FALSE",
     "TYPE":"FALSE"

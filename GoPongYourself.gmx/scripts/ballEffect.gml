@@ -1,0 +1,1 @@
+///ballEffect(cardID)

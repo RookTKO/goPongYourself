@@ -68,7 +68,7 @@ cardID = 0;
 cardNAME = "NA";
 cardWPOINTS = 0;
 cardDESC = "NA";
-cardEFFECT = "False";
+cardEFFECT = "FALSE";
 cardTYPE = noone;
 </string>
           </argument>
@@ -121,7 +121,9 @@ cardTYPE = noone;
     if (hover_check)
     {
         draw_text(100, 100, cardNAME);
-        draw_text(100, 150, cardDESC);
+        draw_text(100, 120, cardWPOINTS);
+        draw_text(100, 140, cardEFFECT);
+        draw_text(100, 160, cardDESC);
     }
 </string>
           </argument>

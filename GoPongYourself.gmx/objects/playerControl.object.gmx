@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>hP = 100;
 wP = 0;
+playerScore = 0;
+
 </string>
           </argument>
         </arguments>

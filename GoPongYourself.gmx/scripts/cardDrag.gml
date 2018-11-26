@@ -2,9 +2,22 @@ if (mouse_check_button_released(mb_left))
 {
     if (place_meeting(x,y, objGraveyard))
     {
-        playerControl.wP += 1;
-        //instance_deactivate_object(self);
         instance_destroy();
+    }
+        else
+    {
+        state = cardBaseState;
+
+    }
+    if  place_meeting(x,y, objMainArea) && (objPaddleP1.wP >= self.cardWPOINTS)
+    {
+        objPaddleP1.wP -= self.cardWPOINTS;
+        if self.cardEFFECT == "TRUE"
+        {
+            cardEffect(self.cardID, self.cardTYPE);
+        }
+    instance_destroy();
+                
     }
         else
     {

@@ -59,6 +59,8 @@
     <instance objName="object5" x="16" y="496" name="inst_C8DFF421" locked="0" code="" scaleX="0.3125" scaleY="89.3333358764648" colour="4294967295" rotation="0"/>
     <instance objName="object5" x="1904" y="336" name="inst_5E62518E" locked="0" code="" scaleX="0.4375" scaleY="106.400001525879" colour="4294967295" rotation="0"/>
     <instance objName="objGraveyard" x="480" y="992" name="inst_01A7684D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objMainArea" x="-96" y="-32" name="inst_634AA112" locked="0" code="" scaleX="66" scaleY="28" colour="4294967295" rotation="0"/>
+    <instance objName="objWarpZone" x="1024" y="448" name="inst_159885F2" locked="0" code="" scaleX="71" scaleY="6" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

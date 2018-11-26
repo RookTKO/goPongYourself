@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ballSpeed = global.game_speed/6;
+            <string>///BALL VARIABLES
+ballSpeed = global.game_speed/6;
 ballDiff = 0;
 ballAngle = 0;
 ballCritSpeed = 0;
@@ -188,7 +189,7 @@ show_debug_message("Self.y: " + string(self.y));
           </argument>
           <argument>
             <kind>4</kind>
-            <string>1</string>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
