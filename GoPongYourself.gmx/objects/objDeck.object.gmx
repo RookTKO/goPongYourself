@@ -77,6 +77,7 @@ y = 992;
             <string>if (instance_number(objCard) &lt; 5 &amp;&amp; alarm[0] == -1) {
     var card = instance_create(x, y-4, objCard);
     card.value = choose(1, 2, 3, 4, 5);
+    
     alarm[0] = room_speed;
 }
 </string>

@@ -156,7 +156,7 @@ if (speed &lt; ballSpeed)
           <argument>
             <kind>1</kind>
             <string>///Debug Console
-
+/**
 show_debug_message("ballSpeed: " + string(ballSpeed));
 show_debug_message("Speed: " + string(speed));
 //show_debug_message("ballAngle: " + string(ballAngle));
