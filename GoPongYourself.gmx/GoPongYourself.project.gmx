@@ -36,10 +36,14 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\loadJSON.gml</script>
-    <script>scripts\paddleCreation.gml</script>
-    <script>scripts\ballBounce.gml</script>
-    <script>scripts\smoothApproach.gml</script>
+    <scripts name="Objects">
+      <script>scripts\ballBounce.gml</script>
+      <script>scripts\paddleCreation.gml</script>
+    </scripts>
+    <scripts name="Control">
+      <script>scripts\smoothApproach.gml</script>
+      <script>scripts\loadJSON.gml</script>
+    </scripts>
     <scripts name="Card Scripts">
       <script>scripts\cardDrag.gml</script>
       <script>scripts\cardIdle.gml</script>
@@ -73,6 +77,14 @@
     <room>rooms\room0</room>
     <room>rooms\room1</room>
   </rooms>
+  <constants number="6">
+    <constant name="ID">0</constant>
+    <constant name="NAME">1</constant>
+    <constant name="WPOINTS">2</constant>
+    <constant name="DESC">3</constant>
+    <constant name="EFFECT">4</constant>
+    <constant name="TYPE">5</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

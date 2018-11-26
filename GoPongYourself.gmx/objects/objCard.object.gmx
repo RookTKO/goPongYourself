@@ -64,12 +64,12 @@ for (var xx=640; xx&lt;=1280; xx+=160)
           <argument>
             <kind>1</kind>
             <string>///Card Values
-ID = 0;
-NAME = "NA";
-WPOINTS = 0;
-DESC = "NA";
-EFFECT = "False";
-TYPE = noone;
+cardID = 0;
+cardNAME = "NA";
+cardWPOINTS = 0;
+cardDESC = "NA";
+cardEFFECT = "False";
+cardTYPE = noone;
 </string>
           </argument>
         </arguments>
@@ -100,6 +100,34 @@ TYPE = noone;
         </arguments>
       </action>
     </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///CARD HOVER DESCRIPTION  
+    if (hover_check)
+    {
+        draw_text(100, 100, cardNAME);
+        draw_text(100, 150, cardDESC);
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -123,9 +151,10 @@ TYPE = noone;
 else
 {
 
-    draw_sprite_ext(sprCardFront, value-1, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+    draw_sprite_ext(sprCardFront, value, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
     draw_set_colour(c_red);
     draw_text(x, y, index);
+
 }
 </string>
           </argument>

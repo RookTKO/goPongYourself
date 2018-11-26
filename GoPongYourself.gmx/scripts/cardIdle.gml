@@ -4,3 +4,4 @@ if (hover_check && mouse_check_button_pressed(mb_left)) {
     state = cardDrag;
     control.card = true;
 }
+
