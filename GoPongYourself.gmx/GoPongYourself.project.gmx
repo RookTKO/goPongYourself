@@ -53,6 +53,9 @@
       <script>scripts\cardEffect.gml</script>
       <scripts name="CardType">
         <script>scripts\ballEffect.gml</script>
+        <script>scripts\paddleEffect.gml</script>
+        <script>scripts\hpEffect.gml</script>
+        <script>scripts\otherEffect.gml</script>
       </scripts>
     </scripts>
   </scripts>
