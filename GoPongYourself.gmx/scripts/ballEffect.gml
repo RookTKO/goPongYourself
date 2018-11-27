@@ -49,4 +49,16 @@ switch (argument0)
             }
         }
         break;
+    case 28 :
+        if instance_exists(ball)
+        {
+        with ball
+        {
+        ballSpeed = 20;
+        }
+        }
+        break;
+    case 31 :
+        instance_create(x, y, ball);
+        break;
 }

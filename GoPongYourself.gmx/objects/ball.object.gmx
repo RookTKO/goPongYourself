@@ -158,7 +158,7 @@ if (speed &lt; ballSpeed)
             <string>///Debug Console
 /**
 show_debug_message("ballSpeed: " + string(ballSpeed));
-show_debug_message("Speed: " + string(speed));
+show_debug_message("Speed: " + string(speed));/**
 //show_debug_message("ballAngle: " + string(ballAngle));
 show_debug_message("Self.y: " + string(self.y));
 //show_debug_message("dir.x: " + string(direction));
