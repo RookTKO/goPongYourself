@@ -5,3 +5,14 @@ if (hover_check && mouse_check_button_pressed(mb_left)) {
     control.card = true;
 }
 
+if (hover_check)
+{
+    image_xscale = 1.2;
+    image_yscale = 1.2;
+}
+else
+{
+    image_xscale = 1;
+    image_yscale = 1;
+}
+

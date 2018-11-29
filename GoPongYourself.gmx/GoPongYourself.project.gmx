@@ -79,6 +79,7 @@
         <object>objects\objCard</object>
         <object>objects\objDeck</object>
         <object>objects\objGraveyard</object>
+        <object>objects\object13</object>
       </objects>
     </objects>
   </objects>

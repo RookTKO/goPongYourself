@@ -54,7 +54,7 @@ switch (argument0)
         {
         with ball
         {
-        ballSpeed = 20;
+        ballSpeed = (ballspeed/2);
         }
         }
         break;
