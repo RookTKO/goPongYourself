@@ -200,7 +200,7 @@ if (ballBlink = true)
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="object5">
+    <event eventtype="4" ename="objWall">
       <action>
         <libid>1</libid>
         <id>115</id>
@@ -244,15 +244,18 @@ if (ballBlink = true)
           <argument>
             <kind>1</kind>
             <string>///Destruction
-if (self.y &gt; room_height)
+if (self.y &gt; (room_height/2))
 {
     objPaddleP1.hP -= ballDamage;
     instance_destroy(self);
 }
-else if (instance_exists(aiControl)) &amp;&amp; (self.y &lt; 0)
+else 
 {
-    objPaddleAi.hP -= ballDamage;
-    instance_destroy(self);
+    if (instance_exists(aiControl)) &amp;&amp; (self.y &lt; (room_height/2))
+    {
+        objPaddleAi.hP -= ballDamage;
+        instance_destroy(self);
+    }
 }
 </string>
           </argument>

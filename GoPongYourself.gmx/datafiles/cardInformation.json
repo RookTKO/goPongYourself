@@ -2,249 +2,253 @@
  {
    "ID": 0,
    "NAME": "Floppy Disk",
-   "WPOINTS": 1,
+   "WPOINTS": 6,
    "DESC": "Size doesn't always matter. Shrinks the opponents paddle by half and removes critical ability.",
-   "EFFECT": "PADDLE",
-   "TYPE": "DEF"
+   "EFFECT": "PADDLE"
  },
  {
    "ID": 1,
    "NAME": "Zip Drive",
-   "WPOINTS": 1,
+   "WPOINTS": 6,
    "DESC": "Size always matters. Increases your own paddle by half and removes critical ability.",
-   "EFFECT": "PADDLE",
-   "TYPE": "OFF"
+   "EFFECT": "PADDLE"
  },
  {
    "ID": 2,
-   "NAME": "Damage Increase",
-   "WPOINTS": 1,
-   "DESC": "Increases the damage done by the ball by one.",
-   "EFFECT": "BALL",
-   "TYPE": "OFF"
+   "NAME": "SUDO SU",
+   "WPOINTS": 0,
+   "DESC": "Increases the damage done by the ball currently in play by one.",
+   "EFFECT": "BALL"
  },
  {
    "ID": 3,
    "NAME": "Lucky Number 0x7",
-   "WPOINTS": 1,
-   "DESC": "Splits the ball into several randomly chosen (1 throught 7) smaller pieces.",
-   "EFFECT": "BALL",
-   "TYPE": "OFF"
+   "WPOINTS": 8,
+   "DESC": "Explodes the ball into several randomly generated (1 through 7) smaller pieces and sent into a random direction ( 0 through 360).",
+   "EFFECT": "BALL"
  },
  {
    "ID": 4,
    "NAME": "Hat Trick",
-   "WPOINTS": 1,
+   "WPOINTS": 5,
    "DESC": "Creates two illusions of the ball.",
-   "EFFECT": "BALL",
-   "TYPE": "OFF"
+   "EFFECT": "BALL"
  },
  {
    "ID": 5,
-   "NAME": "Lock the Screen",
+   "NAME": "Logic Gate OR",
    "WPOINTS": 1,
    "DESC": "Shrinks your own gate size.",
-   "EFFECT": "OTHER",
-   "TYPE": "DEF"
+   "EFFECT": "OTHER"
  },
  {
    "ID": 6,
-   "NAME": "Open Up Wide",
+   "NAME": "Logic Gate NOR",
    "WPOINTS": 1,
    "DESC": "Increases opponents gate to max size. If gate is already at max size then it also applys a gravitational force into their gate.",
-   "EFFECT": "OTHER",
-   "TYPE": "OFF"
+   "EFFECT": "OTHER"
  },
  {
    "ID": 7,
    "NAME": "Logic Bomb",
-   "WPOINTS": 1,
+   "WPOINTS": 4,
    "DESC": "With each paddle hit the ball increases in damage untill it travels into someones gate. Then it resets to normal.",
-   "EFFECT": "BALL",
-   "TYPE": "OFF"
+   "EFFECT": "BALL"
  },
  {
    "ID": 8,
    "NAME": "AntiVirus",
-   "WPOINTS": 1,
+   "WPOINTS": 9,
    "DESC": "Removes any buffs from the field.",
-   "EFFECT": "OTHER",
-   "TYPE": "UTI"
+   "EFFECT": "OTHER"
  },
  {
    "ID": 9,
    "NAME": "Disk Cleaner",
-   "WPOINTS": 1,
-   "DESC": "Increase your own health points by #.",
-   "EFFECT": "HP",
-   "TYPE": "DEF"
+   "WPOINTS": 6,
+   "DESC": "Increase your own health points by 2.",
+   "EFFECT": "HP"
  },
  {
    "ID": 10,
-   "NAME": "Fibre",
-   "WPOINTS": 1,
-   "DESC": "Increase the speed of all balls by #.",
-   "EFFECT": "BALL",
-   "TYPE": "OFF"
+   "NAME": "Fiber Optics",
+   "WPOINTS": 6,
+   "DESC": "Increase the speed of all balls by # and increase the damage by # perm.",
+   "EFFECT": "BALL"
  },
  {
    "ID": 11,
-   "NAME": "Double Trouble",
-   "WPOINTS": 1,
+   "NAME": "Bug",
+   "WPOINTS": 7,
    "DESC": "Two paddles instead of one.",
-   "EFFECT": "PADDLE",
-   "TYPE": "DEF"
+   "EFFECT": "PADDLE"
  },
  {
    "ID": 12,
    "NAME": "Trojan Horse",
    "WPOINTS": 1,
    "DESC": "Get # life back from each brick you destroy.",
-   "EFFECT": "HP",
-   "TYPE": "UTI"
+   "EFFECT": "HP"
  },
  {
    "ID": 13,
    "NAME": "BitCoin Miner",
    "WPOINTS": 1,
    "DESC": "Get # life back from every # paddle hit.",
-   "EFFECT": "HP",
-   "TYPE": "UTI"
+   "EFFECT": "HP"
  },
  {
    "ID": 14,
-   "NAME": "Firewall",
-   "WPOINTS": 1,
+   "NAME": "FireWall",
+   "WPOINTS": 6,
    "DESC": "Create a layer of bricks on your side of the field. Bricks break after # hit.",
-   "EFFECT": "OTHER",
-   "TYPE": "DEF"
+   "EFFECT": "OTHER"
  },
  {
    "ID": 15,
-   "NAME": "System Boost",
-   "WPOINTS": 1,
+   "NAME": "SystemBoost",
+   "WPOINTS": 6,
    "DESC": "Increase the speed of the ball for yourself when it is traveling towards your opponents gate.",
-   "EFFECT": "BALL",
-   "TYPE": "OFF"
+   "EFFECT": "BALL"
  },
  {
    "ID": 16,
    "NAME": "Proxy",
    "WPOINTS": 1,
    "DESC": "Create a wormhole on both sides of the field at random.",
-   "EFFECT": "OTHER",
-   "TYPE": "UTI"
+   "EFFECT": "OTHER"
  },
  {
    "ID": 17,
    "NAME": "Smaller They Are, The Harder They Hit",
-   "WPOINTS": 1,
+   "WPOINTS": 5,
    "DESC": "Shrink the ball size down by half for everyone.",
-   "EFFECT": "BALL",
-   "TYPE": "OFF"
+   "EFFECT": "BALL"
  },
  {
    "ID": 18,
    "NAME": "Clean Sweep",
    "WPOINTS": 1,
    "DESC": "Removes all buffs off the oponent side of the field.",
-   "EFFECT": "OTHER",
-   "TYPE": "OFF"
+   "EFFECT": "OTHER"
  },
  {
    "ID": 19,
    "NAME": "Spam",
-   "WPOINTS": 1,
+   "WPOINTS": 7,
    "DESC": "Everytime the ball bounces it has a # to multiply. Last # turns.",
-   "EFFECT": "BALL",
-   "TYPE": "UTI"
+   "EFFECT": "BALL"
  },
  {
    "ID": 20,
    "NAME": "Burn Baby Burn",
    "WPOINTS": 1,
    "DESC": "Burning cards now damages your opponent for # and does not give you Warp Points back. ",
-   "EFFECT": "OTHER",
-   "TYPE": "OFF"
+   "EFFECT": "OTHER"
  },
  {
    "ID": 21,
    "NAME": "JoyStick LVL 1",
    "WPOINTS": 1,
    "DESC": "Balls become sticky to your pad and waits to be released.",
-   "EFFECT": "PADDLE",
-   "TYPE": "OFF"
+   "EFFECT": "PADDLE"
  },
  {
    "ID": 22,
    "NAME": "JoyStick LVL 2",
    "WPOINTS": 1,
    "DESC": "You can charge up your ball before you release it.",
-   "EFFECT": "PADDLE",
-   "TYPE": "OFF"
+   "EFFECT": "PADDLE"
  },
  {
    "ID": 23,
    "NAME": "JoyStick LVL 3",
    "WPOINTS": 1,
    "DESC": "You can change the direction of the ball.",
-   "EFFECT": "BALL",
-   "TYPE": "OFF"
+   "EFFECT": "BALL"
  },
  {
    "ID": 24,
    "NAME": "SpyWare",
    "WPOINTS": 1,
    "DESC": "Everytime your opponent deflects the ball you gain # life back. Last # turns.",
-   "EFFECT": "HP",
-   "TYPE": "UTI"
+   "EFFECT": "HP"
  },
  {
    "ID": 25,
    "NAME": "Script Kiddie",
-   "WPOINTS": 1,
+   "WPOINTS": 8,
    "DESC": "Makes the ball invisible to your opponent for # turns.",
-   "EFFECT": "BALL",
-   "TYPE": "OFF"
+   "EFFECT": "BALL"
  },
  {
    "ID": 26,
    "NAME": "Biometrics",
-   "WPOINTS": 1,
+   "WPOINTS": 8,
    "DESC": "Creates rotating bricks on your side of the field. Bricks break after # hit.",
-   "EFFECT": "OTHER",
-   "TYPE": "DEF"
+   "EFFECT": "OTHER"
  },
  {
    "ID": 27,
    "NAME": "IPS (Intrusion Prevention System)",
-   "WPOINTS": 1,
+   "WPOINTS": 10,
    "DESC": "Create two turrets on your field opposite of each other that target and destroy any balls if they are (a) buffed or/and (b) more then one ball is in play.",
-   "EFFECT": "OTHER",
-   "TYPE": "DEF"
+   "EFFECT": "OTHER"
  },
  {
    "ID": 28,
    "NAME": "Dial-Up",
-   "WPOINTS": 1,
-   "DESC": "Reduce the ball speed by #.",
-   "EFFECT": "BALL",
-   "TYPE": "DEF"
+   "WPOINTS": 2,
+   "DESC": "Reduce the ball speed by half.",
+   "EFFECT": "BALL"
  },
  {
    "ID": 29,
    "NAME": "DMZ",
-   "WPOINTS": 1,
+   "WPOINTS": 8,
    "DESC": "Create two unbreakable on your side of the field.",
-   "EFFECT": "OTHER",
-   "TYPE": "DEF"
+   "EFFECT": "OTHER"
  },
  {
    "ID": 30,
    "NAME": "Payload",
-   "WPOINTS": 1,
+   "WPOINTS": 6,
    "DESC": "Reduce your lifepoints by half, but also reduce your opponents life points by half.",
-   "EFFECT": "HP",
-   "TYPE": "UTI"
+   "EFFECT": "HP"
+ },
+ {
+   "ID": 31,
+   "NAME": "Player Two",
+   "WPOINTS": 5,
+   "DESC": "Creates another ball on the field permanently. ",
+   "EFFECT": "BALL"
+ },
+ {
+   "ID": 32,
+   "NAME": "Broadband",
+   "WPOINTS": 4,
+   "DESC": "Increase the ball speed x2.",
+   "EFFECT": "BALL"
+ },
+ {
+   "ID": 33,
+   "NAME": "Virus",
+   "WPOINTS": 9,
+   "DESC": "Minus # HP from both players everytime the ball bounces until it passes through a gate.",
+   "EFFECT": "HP"
+ },
+ {
+   "ID": 34,
+   "NAME": "Swipe Left",
+   "WPOINTS": 3,
+   "DESC": "",
+   "EFFECT": "BALL"
+ },
+ {
+   "ID": 35,
+   "NAME": "Swipe Right",
+   "WPOINTS": 3,
+   "DESC": "",
+   "EFFECT": "BALL"
  }
 ]

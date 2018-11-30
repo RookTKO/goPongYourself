@@ -111,7 +111,8 @@ switch state{
         break;
     case 0:
     paddleCreation((room_width/2), 800, objPaddleP1);
-    paddleCreation((room_width/2), 96, objPaddleAi);
+    paddleCreation((room_width/2), 32, objPaddleAi);
+    wallCreation()
         if (!instance_exists(ball))
         {
             instance_create(room_width/2,room_height/2,ball);

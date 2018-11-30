@@ -25,14 +25,20 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprPaddle</sprite>
-    <sprite>sprites\sprBall</sprite>
     <sprite>sprites\sprCardDeck</sprite>
     <sprite>sprites\sprCardBack</sprite>
     <sprite>sprites\sprCardFront</sprite>
-    <sprite>sprites\sprCardLoadArea</sprite>
-    <sprite>sprites\sprMainPongArea</sprite>
-    <sprite>sprites\sprWarpZone</sprite>
+    <sprites name="Room">
+      <sprite>sprites\sprWall</sprite>
+      <sprite>sprites\sprWarpZone</sprite>
+      <sprite>sprites\sprMainPongArea</sprite>
+      <sprite>sprites\sprCardLoadArea</sprite>
+      <sprite>sprites\sprite9</sprite>
+    </sprites>
+    <sprites name="Objects">
+      <sprite>sprites\sprBall</sprite>
+      <sprite>sprites\sprPaddle</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -40,6 +46,7 @@
     <scripts name="Objects">
       <script>scripts\ballBounce.gml</script>
       <script>scripts\paddleCreation.gml</script>
+      <script>scripts\wallCreation.gml</script>
     </scripts>
     <scripts name="Control">
       <script>scripts\smoothApproach.gml</script>
@@ -58,6 +65,7 @@
         <script>scripts\otherEffect.gml</script>
       </scripts>
     </scripts>
+    <script>scripts\console_log.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Controls">
@@ -73,19 +81,18 @@
     <objects name="Objects">
       <object>objects\ball</object>
       <object>objects\objPaddleAi</object>
-      <object>objects\object5</object>
+      <object>objects\objWall</object>
       <objects name="Player1H">
         <object>objects\objPaddleP1</object>
         <object>objects\objCard</object>
         <object>objects\objDeck</object>
         <object>objects\objGraveyard</object>
-        <object>objects\object13</object>
       </objects>
+      <object>objects\objDesLas</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
-    <room>rooms\room1</room>
   </rooms>
   <constants number="6">
     <constant name="ID">0</constant>

@@ -5,7 +5,7 @@ switch (argument0)
     case 2:
         if instance_exists(ball)
         {
-            ballDamage+= 1;
+            ball.ballDamage+= 1;
         }
         break;
     case 3 :
@@ -52,10 +52,10 @@ switch (argument0)
     case 28 :
         if instance_exists(ball)
         {
-        with ball
-        {
-        ballSpeed = (ballspeed/2);
-        }
+            with ball
+            {
+                ball.ballSpeed = (ball.ballSpeed/2);
+            }
         }
         break;
     case 31 :

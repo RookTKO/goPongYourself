@@ -9,8 +9,8 @@
   <bboxmode>0</bboxmode>
   <bbox_left>1</bbox_left>
   <bbox_right>95</bbox_right>
-  <bbox_top>2</bbox_top>
-  <bbox_bottom>125</bbox_bottom>
+  <bbox_top>0</bbox_top>
+  <bbox_bottom>127</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -38,5 +38,23 @@
     <frame index="15">images\sprCardFront_15.png</frame>
     <frame index="16">images\sprCardFront_16.png</frame>
     <frame index="17">images\sprCardFront_17.png</frame>
+    <frame index="18">images\sprCardFront_18.png</frame>
+    <frame index="19">images\sprCardFront_19.png</frame>
+    <frame index="20">images\sprCardFront_20.png</frame>
+    <frame index="21">images\sprCardFront_21.png</frame>
+    <frame index="22">images\sprCardFront_22.png</frame>
+    <frame index="23">images\sprCardFront_23.png</frame>
+    <frame index="24">images\sprCardFront_24.png</frame>
+    <frame index="25">images\sprCardFront_25.png</frame>
+    <frame index="26">images\sprCardFront_26.png</frame>
+    <frame index="27">images\sprCardFront_27.png</frame>
+    <frame index="28">images\sprCardFront_28.png</frame>
+    <frame index="29">images\sprCardFront_29.png</frame>
+    <frame index="30">images\sprCardFront_30.png</frame>
+    <frame index="31">images\sprCardFront_31.png</frame>
+    <frame index="32">images\sprCardFront_32.png</frame>
+    <frame index="33">images\sprCardFront_33.png</frame>
+    <frame index="34">images\sprCardFront_34.png</frame>
+    <frame index="35">images\sprCardFront_35.png</frame>
   </frames>
 </sprite>

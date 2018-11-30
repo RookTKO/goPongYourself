@@ -83,7 +83,6 @@ y = 992;
     c.cardWPOINTS = global.cardData[# i, WPOINTS];
     c.cardDESC = global.cardData[# i, DESC];
     c.cardEFFECT = global.cardData[# i, EFFECT];
-    c.cardTYPE = global.cardData[# i, TYPE];
     alarm[0] = room_speed;
 }
 </string>
