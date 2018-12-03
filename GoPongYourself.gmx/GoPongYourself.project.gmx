@@ -31,6 +31,7 @@
       <sprite>sprites\sprMainPongArea</sprite>
       <sprite>sprites\sprCardLoadArea</sprite>
       <sprite>sprites\sprite9</sprite>
+      <sprite>sprites\sprCarArea</sprite>
     </sprites>
     <sprites name="Objects">
       <sprite>sprites\sprBall</sprite>

@@ -8,7 +8,7 @@
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
-  <colour>0</colour>
+  <colour>2430737</colour>
   <showcolour>-1</showcolour>
   <code></code>
   <enableViews>0</enableViews>
@@ -56,8 +56,7 @@
     <instance objName="aiControl" x="224" y="32" name="inst_6AAC9E97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDeck" x="1536" y="992" name="inst_AFE9A563" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objGraveyard" x="480" y="992" name="inst_01A7684D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objMainArea" x="0" y="-32" name="inst_634AA112" locked="0" code="" scaleX="60" scaleY="27" colour="4294967295" rotation="0"/>
-    <instance objName="objWarpZone" x="960" y="291" name="inst_AE621F82" locked="-1" code="" scaleX="1" scaleY="1.00185358524323" colour="4294967295" rotation="0"/>
+    <instance objName="objWarpZone" x="960" y="405" name="inst_AE5CF3CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
