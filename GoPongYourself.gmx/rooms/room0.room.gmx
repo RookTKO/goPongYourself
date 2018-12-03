@@ -54,7 +54,6 @@
     <instance objName="control" x="96" y="32" name="inst_7C0630FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="playerControl" x="160" y="32" name="inst_10669414" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="aiControl" x="224" y="32" name="inst_6AAC9E97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ball" x="480" y="288" name="inst_39066674" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDeck" x="1536" y="992" name="inst_AFE9A563" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objGraveyard" x="480" y="992" name="inst_01A7684D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objMainArea" x="0" y="-32" name="inst_634AA112" locked="0" code="" scaleX="60" scaleY="27" colour="4294967295" rotation="0"/>

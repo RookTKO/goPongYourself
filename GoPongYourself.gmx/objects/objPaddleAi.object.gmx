@@ -64,14 +64,16 @@
             <kind>1</kind>
             <string>///Movement
 
-
-if (self.bbox_left &lt; ball.x &amp;&amp; self.bbox_left &lt; room_width)
+if (instance_exists(ball))
 {
-    self.x += 10;
-}
-if (self.bbox_right &gt; ball.x &amp;&amp; self.bbox_right &gt; 0)
-{
-    self.x -= 10;
+    if (self.bbox_left &lt; ball.x &amp;&amp; self.bbox_left &lt; room_width)
+    {
+        self.x += 10;
+    }
+    if (self.bbox_right &gt; ball.x &amp;&amp; self.bbox_right &gt; 0)
+    {
+        self.x -= 10;
+    }
 }
 </string>
           </argument>

@@ -33,6 +33,18 @@ ballCritSpeed = 0;
 ballSpeedBump = 0;
 ballDamage = 1;
 ballBlink = false;
+
+
+dir = 0;
+dissolve_speed = 10;
+chunk_size = 2;
+shrink = 1;
+shrink_amt = 0.05;
+grav = 5;
+fade = 1;
+fade_amt = 0.05;
+spin = 5;
+life = 100;
 </string>
           </argument>
         </arguments>
@@ -58,6 +70,30 @@ ballBlink = false;
           <argument>
             <kind>0</kind>
             <string>ballSpeed</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>speed = 0;
+scr_sprite_dissolve(dir, dissolve_speed, chunk_size, shrink, shrink_amt, grav, fade, fade_amt, spin, life);
+</string>
           </argument>
         </arguments>
       </action>
@@ -199,6 +235,42 @@ if (ballBlink = true)
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Destruction
+
+///Destruction
+if (self.y &gt;= 793)
+{
+    objPaddleP1.hP -= ballDamage;
+    instance_destroy(self);
+}
+else 
+{
+    if (instance_exists(aiControl)) &amp;&amp; (self.y &lt; 48)
+    {
+        objPaddleAi.hP -= ballDamage;
+        instance_destroy(self);
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="4" ename="objWall">
       <action>
@@ -222,42 +294,6 @@ if (ballBlink = true)
           <argument>
             <kind>4</kind>
             <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Destruction
-if (self.y &gt; (room_height/2))
-{
-    objPaddleP1.hP -= ballDamage;
-    instance_destroy(self);
-}
-else 
-{
-    if (instance_exists(aiControl)) &amp;&amp; (self.y &lt; (room_height/2))
-    {
-        objPaddleAi.hP -= ballDamage;
-        instance_destroy(self);
-    }
-}
-</string>
           </argument>
         </arguments>
       </action>

@@ -25,9 +25,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprCardDeck</sprite>
-    <sprite>sprites\sprCardBack</sprite>
-    <sprite>sprites\sprCardFront</sprite>
     <sprites name="Room">
       <sprite>sprites\sprWall</sprite>
       <sprite>sprites\sprWarpZone</sprite>
@@ -38,6 +35,15 @@
     <sprites name="Objects">
       <sprite>sprites\sprBall</sprite>
       <sprite>sprites\sprPaddle</sprite>
+      <sprite>sprites\sprGui</sprite>
+      <sprite>sprites\sprHealth</sprite>
+      <sprite>sprites\sprWarpPoints</sprite>
+      <sprite>sprites\sprLaser</sprite>
+    </sprites>
+    <sprites name="Cards">
+      <sprite>sprites\sprCardFront</sprite>
+      <sprite>sprites\sprCardBack</sprite>
+      <sprite>sprites\sprCardDeck</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -49,8 +55,19 @@
       <script>scripts\wallCreation.gml</script>
     </scripts>
     <scripts name="Control">
-      <script>scripts\smoothApproach.gml</script>
       <script>scripts\loadJSON.gml</script>
+      <script>scripts\console_log.gml</script>
+      <script>scripts\progressBar.gml</script>
+      <script>scripts\drawTextBold.gml</script>
+      <scripts name="Effects">
+        <script>scripts\smoothApproach.gml</script>
+        <script>scripts\scr_Laser_End.gml</script>
+        <script>scripts\scr_Laser_Init.gml</script>
+        <script>scripts\scr_Laser_Update.gml</script>
+        <script>scripts\scr_Laser_Draw.gml</script>
+        <script>scripts\scr_sprite_asymble.gml</script>
+        <script>scripts\scr_sprite_dissolve.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Card Scripts">
       <script>scripts\cardDrag.gml</script>
@@ -65,7 +82,6 @@
         <script>scripts\otherEffect.gml</script>
       </scripts>
     </scripts>
-    <script>scripts\console_log.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Controls">
@@ -79,16 +95,21 @@
       </objects>
     </objects>
     <objects name="Objects">
-      <object>objects\ball</object>
-      <object>objects\objPaddleAi</object>
-      <object>objects\objWall</object>
       <objects name="Player1H">
         <object>objects\objPaddleP1</object>
         <object>objects\objCard</object>
         <object>objects\objDeck</object>
         <object>objects\objGraveyard</object>
       </objects>
-      <object>objects\objDesLas</object>
+      <objects name="Room">
+        <object>objects\objDesLas</object>
+        <object>objects\ball</object>
+        <object>objects\objPaddleAi</object>
+        <object>objects\objWall</object>
+        <object>objects\objDesLaser</object>
+        <object>objects\obj_asymble_particle</object>
+        <object>objects\obj_dissolve_particle</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
