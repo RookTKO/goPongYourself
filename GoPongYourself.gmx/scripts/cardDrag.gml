@@ -21,7 +21,8 @@ if (mouse_check_button_released(mb_left))
         state = cardBaseState;
 
     }
-           hover_check = false;
+            depth = 2;
+        hover_check = false;
         control.card = false;
 }
 x = smoothApproach(x, mouse_x, .3);

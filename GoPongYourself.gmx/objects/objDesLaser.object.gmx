@@ -91,11 +91,12 @@ c_2 = make_colour_rgb(251,79,79);
 // a different controller.
 if draw
 {
-    draw_line_width_colour(7, 48, 1900, 48, 4, c_2, c_2);
+
     scr_Laser_Draw(7, 48, 1900, 48, 40, l_hh, 10, l_width, tex, 2, sprLaser, 0, l_add);
-    //draw_line_width_colour(7, 793, 1900, 793, 4, c_1, c_1);
+        draw_line_width_colour(7, 48, 1900, 48, 4, c_2, c_2);
     scr_Laser_Draw(7, 793, 1900, 793, 40, l_hh, 10, l_width, tex, 2, sprLaser, 0, l_add);
-    draw_line_width_colour(7, 793, 1900, 793, 4, c_1, c_1);
+        draw_line_width_colour(7, 793, 1900, 793, 4, c_1, c_1);
+
 //draw = false;
 }
 else

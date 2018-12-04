@@ -31,12 +31,15 @@
       <sprite>sprites\sprMainPongArea</sprite>
       <sprite>sprites\sprCardLoadArea</sprite>
       <sprite>sprites\sprite9</sprite>
-      <sprite>sprites\sprCarArea</sprite>
+      <sprite>sprites\sprCardAreaFG</sprite>
+      <sprite>sprites\sprCardAreaBG</sprite>
     </sprites>
     <sprites name="Objects">
       <sprite>sprites\sprBall</sprite>
       <sprite>sprites\sprPaddle</sprite>
       <sprite>sprites\sprGui</sprite>
+      <sprite>sprites\sprAIGUI</sprite>
+      <sprite>sprites\sprAIHealth</sprite>
       <sprite>sprites\sprHealth</sprite>
       <sprite>sprites\sprWarpPoints</sprite>
       <sprite>sprites\sprLaser</sprite>
@@ -93,6 +96,7 @@
         <object>objects\objWarpZone</object>
         <object>objects\objMainArea</object>
         <object>objects\objP1CardArea</object>
+        <object>objects\objP1CardAreaBG</object>
       </objects>
     </objects>
     <objects name="Objects">

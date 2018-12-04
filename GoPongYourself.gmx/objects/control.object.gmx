@@ -152,7 +152,9 @@ if (instance_exists(playerControl))
 }
 if (instance_exists(aiControl))
 {
-    draw_text((room_width/2), 32, "Player AI: " + string(objPaddleAi.hP));
+progressBar(view_xview+(room_width/2), view_yview+8, objPaddleAi.hP, objPaddleAi.hPMax, sprAIHealth, sprAIGUI, view_xview+240, view_yview+9);
+drawTextBold(view_xview+(room_width/2)-90, view_yview+8, "Enemy Life Points: " + string(objPaddleAi.hP),c_white, c_black);
+    //draw_text((room_width/2), 32, "Player AI: " + string(objPaddleAi.hP));
 }
 
 </string>
