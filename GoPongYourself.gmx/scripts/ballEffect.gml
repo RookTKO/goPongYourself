@@ -114,7 +114,7 @@ switch (argument0)
             }
         }
         break;
-    case 20:
+    case 21:
         if instance_exists(ball)
         {
             if ball.y > 400
@@ -127,7 +127,7 @@ switch (argument0)
             }
         }
         break;
-    case 21:
+    case 22:
         if instance_exists(ball)
         {
             if ball.y < 400

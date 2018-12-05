@@ -3,7 +3,7 @@
   <spriteName>sprCardDeck</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-10</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -76,7 +76,7 @@ y = 992;
             <kind>1</kind>
             <string>if (instance_number(objCard) &lt; 5 &amp;&amp; alarm[0] == -1) {
     var c = instance_create(x, y-4, objCard);
-    c.value = choose(0, 1, 2, 4, 9, 11, 28, 30, 31);
+    c.value = irandom_range(0, 28.1);;
     var i = c.value; 
     c.cardID = global.cardData[# i, ID];
     c.cardNAME = global.cardData[# i, NAME];

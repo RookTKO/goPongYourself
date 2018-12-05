@@ -31,4 +31,5 @@ else
     x = tx;
     y = ty;
     state = cardIdle;
+    depth = -2;
 }
