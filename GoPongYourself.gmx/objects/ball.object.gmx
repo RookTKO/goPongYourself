@@ -33,8 +33,12 @@ ballCritSpeed = 0;
 ballSpeedBump = 0;
 ballDamage = 1;
 ballBlink = false;
+logicbombVar = false;
+sysboostVar = false;
+spam = false;
+hots = false;
 
-
+//Assembly / Dissembly
 dir = 0;
 dissolve_speed = 10;
 chunk_size = 2;

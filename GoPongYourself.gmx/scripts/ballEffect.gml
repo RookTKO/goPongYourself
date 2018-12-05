@@ -49,7 +49,98 @@ switch (argument0)
             }
         }
         break;
-    case 28 :
+    case 5 :
+        if instance_exists(ball)
+        {
+            with ball
+            {
+                ball.ballSpeed = (ball.ballSpeed*2);
+            }
+        }
+        break;
+    case 7 :
+        if instance_exists(ball)
+        {
+            with ball
+            {
+                ball.logicbombVar = true;
+            }
+        }
+        break;
+    case 10 :
+        if instance_exists(ball)
+        {
+            with ball
+            {
+                ball.ballSpeed = (ball.ballSpeed*3);
+                ball.ballDamage = (ball.ballDamage*2);
+            }
+        }
+        break;
+    case 15 :
+        if instance_exists(ball)
+        {
+            with ball
+            {
+                ball.sysboostVar = true;
+            }
+        }
+        break;
+    case 17 :
+        if instance_exists(ball)
+        {
+            with ball
+            {
+                ball.image_xscale = (ball.image_xscale/2);
+                ball.image_yscale = (ball.image_yscale/2);
+            }
+        }
+        break;
+    case 19 :
+        if instance_exists(ball)
+        {
+            with ball
+            {
+                ball.spam = true;
+            }
+        }
+        break;
+    case 20 :
+        if instance_exists(ball)
+        {
+            with ball
+            {
+                ball.hots = true;
+            }
+        }
+        break;
+    case 20:
+        if instance_exists(ball)
+        {
+            if ball.y > 400
+            {
+                ball.direction += 45;
+            }
+            if ball.y < 400
+            {
+                ball.direction -= 45;
+            }
+        }
+        break;
+    case 21:
+        if instance_exists(ball)
+        {
+            if ball.y < 400
+            {
+                ball.direction += 45;
+            }
+            if ball.y > 400
+            {
+                ball.direction -= 45;
+            }
+        }
+        break;
+    case 26 :
         if instance_exists(ball)
         {
             with ball
@@ -58,7 +149,7 @@ switch (argument0)
             }
         }
         break;
-    case 31 :
+    case 28 :
         instance_create(x, y, ball);
         break;
 }
