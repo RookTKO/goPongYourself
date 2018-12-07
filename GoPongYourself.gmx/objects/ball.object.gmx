@@ -36,7 +36,9 @@ ballBlink = false;
 logicbombVar = false;
 sysboostVar = false;
 spam = false;
+spam_chance = 10;
 hots = false;
+virus = false;
 
 //Assembly / Dissembly
 dir = 0;
@@ -130,7 +132,10 @@ if (!ballBlink)
             speed = speed - 10;
         }
     }
-    ballBounce(objPaddleP1);
+    if instance_exists(objPaddleP1)
+    {
+        ballBounce(objPaddleP1);
+    }
     if instance_exists(objPaddleAi)
     {
         ballBounce(objPaddleAi);
@@ -222,7 +227,7 @@ show_debug_message("Self.y: " + string(self.y));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Illusion Blinking
+            <string>///Card effects
 if (ballBlink = true)
 {
     if image_alpha == 1
@@ -233,8 +238,39 @@ if (ballBlink = true)
     {
         image_alpha = 1;
     }
-
 }
+
+if (sysboostVar)
+{
+    if (self.y &lt; 400)
+    {
+        speed = global.game_speed/3;
+    }
+}
+if (spam)
+{
+    if (spam_chance &gt;= 30)
+    {
+        spam_chance = 30;
+    }
+}
+
+if (hots)
+{
+    if (self.y &lt; 400)
+    {
+        ballDamage = ballDamage+2;
+    }
+    else
+    {
+        ballDamage = ballDamage-2;
+        if (ballDamage &lt; 1)
+        {
+            ballDamage = 1;
+        }
+    }
+}
+
 </string>
           </argument>
         </arguments>
@@ -298,6 +334,70 @@ else
           <argument>
             <kind>4</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (spam)
+{
+spam_chance = (spam_chance + 2);
+multipy_check = irandom_range(0, 100);
+    if (multipy_check &lt;= spam_chance)
+    {
+        instance_create(self.x,self.y,ball);
+    }
+}
+
+if (virus)
+{
+    objPaddleP1.hP -=1;
+    objPaddleAi.hP -= 1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+if (logicbombVar == true)
+{
+
+    draw_sprite(sprLogicBomb, 0, self.x,self.y);
+    draw_text_ext_transformed(self.x-50, self.y-68, string(self.ballDamage), 100, 100, 3, 3, 0);
+}
+</string>
           </argument>
         </arguments>
       </action>

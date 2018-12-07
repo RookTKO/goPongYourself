@@ -43,6 +43,7 @@
       <sprite>sprites\sprHealth</sprite>
       <sprite>sprites\sprWarpPoints</sprite>
       <sprite>sprites\sprLaser</sprite>
+      <sprite>sprites\sprLogicBomb</sprite>
     </sprites>
     <sprites name="Cards">
       <sprite>sprites\sprCardFront</sprite>
@@ -54,9 +55,9 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Objects">
-      <script>scripts\ballBounce.gml</script>
       <script>scripts\paddleCreation.gml</script>
       <script>scripts\wallCreation.gml</script>
+      <script>scripts\ballBounce.gml</script>
     </scripts>
     <scripts name="Control">
       <script>scripts\loadJSON.gml</script>
@@ -87,6 +88,7 @@
       </scripts>
     </scripts>
   </scripts>
+  <fonts name="fonts"/>
   <objects name="objects">
     <objects name="Controls">
       <object>objects\control</object>

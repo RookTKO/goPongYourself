@@ -1,24 +1,25 @@
 ///ballBounce(paddleType)
-/*var ySwitch = false; 
-
-if (argument0 == objPaddleP1)
-{
-    if (self.y < argument0.y)
-    {
-        ySwitch = true;
-    }
-}
-else if (argument0 == objPaddleAi)
-{
-    if (self.y > argument0.y)
-    {
-        ySwitch = true;
-    }
-}
-*/ //Was causing ball to fall through
 
 if place_meeting(self.x, self.y, argument0) //&& (ySwitch)
 {
+    if (virus)
+    {
+        objPaddleP1.hP -=1;
+        objPaddleAi.hP -= 1;
+    }
+    if (spam)
+    {
+    spam_chance = (spam_chance + 2);
+    multipy_check = irandom_range(0, 100);
+        if (multipy_check <= spam_chance)
+        {
+            instance_create(self.x,self.y,ball);
+        }
+    }
+    if (logicbombVar)
+    {
+        self.ballDamage += 1;
+    }
     if (argument0.x > self.x)
     {
     

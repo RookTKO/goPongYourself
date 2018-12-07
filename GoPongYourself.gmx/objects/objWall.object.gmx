@@ -133,7 +133,6 @@ if (rightSwitch)
         instance_create(self.x, 66, objDesLas);
         rightSwitch = false;
     }
-            show_debug_message(image_yscale);
 
 
 }
