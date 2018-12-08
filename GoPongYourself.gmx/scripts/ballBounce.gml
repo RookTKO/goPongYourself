@@ -2,8 +2,17 @@
 
 if place_meeting(self.x, self.y, argument0) //&& (ySwitch)
 {
+if (argument0 == objPaddleP1)
+{
+    self.image_blend=make_color_rgb(170,255,255);
+}
+if (argument0 == objPaddleAi)
+{
+    self.image_blend=make_color_rgb(255,166,166);
+}
     if (virus)
     {
+        scr_tweenBallEffect("hpdn");
         objPaddleP1.hP -=1;
         objPaddleAi.hP -= 1;
     }

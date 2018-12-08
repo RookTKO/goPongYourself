@@ -11,6 +11,7 @@ switch (argument0)
         if instance_exists(objPaddleP1)
         {
                 objPaddleP1.hP += 3;
+                scr_tweenBallEffect("hpup");
         }
         break;
     case 12 :
@@ -36,6 +37,7 @@ switch (argument0)
         {
                 objPaddleP1.hP = floor(objPaddleP1.hP/2);
                 objPaddleAi.hP = floor(objPaddleAi.hP/2);
+        scr_tweenBallEffect("hpdn");
         }
         break;
 }

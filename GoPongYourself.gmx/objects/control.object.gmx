@@ -113,7 +113,7 @@ switch state{
     paddleCreation((room_width/2), 768, objPaddleP1);
     paddleCreation((room_width/2), 64, objPaddleAi);
     wallCreation()
-        if (!instance_exists(ball))
+        if (!instance_exists(ball) &amp;&amp; instance_exists(objDesLaser))
         {
         scr_sprite_asymble(ball, sprBall, 30, 500, 10,room_width/2,400 );
         }

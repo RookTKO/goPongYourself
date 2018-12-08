@@ -31,6 +31,7 @@ if (round(x) != tx ||  round(y) != ty) {
     var dis = point_distance(x, y, tx, ty);
     var xscale = (dis/(total_dis/2)-1)*-1;
     image_xscale = xscale;
+    depth = instance_number(objCard)*-2;
 }
 
 else
@@ -38,4 +39,5 @@ else
     x = tx;
     y = ty;
     state = cardIdle;
+    depth = -1;
 }

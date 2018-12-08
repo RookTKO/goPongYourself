@@ -6,6 +6,7 @@ switch (argument0)
         if instance_exists(ball)
         {
             ball.ballDamage+= 1;
+            scr_tweenBallEffect("attup");
         }
         break;
     case 3 :
@@ -55,7 +56,9 @@ switch (argument0)
             with ball
             {
                 ball.ballSpeed = (ball.ballSpeed*2);
+                scr_tweenBallEffect("spdup");
             }
+        
         }
         break;
     case 7 :
@@ -74,6 +77,8 @@ switch (argument0)
             {
                 ball.ballSpeed = (ball.ballSpeed*3);
                 ball.ballDamage = (ball.ballDamage*2);
+                scr_tweenBallEffect("attup");
+                scr_tweenBallEffect("spdup");
             }
         }
         break;
@@ -146,6 +151,7 @@ switch (argument0)
             with ball
             {
                 ball.ballSpeed = (ball.ballSpeed/2);
+                scr_tweenBallEffect("spddn");
             }
         }
         break;

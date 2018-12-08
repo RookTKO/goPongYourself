@@ -40,6 +40,7 @@ spam_chance = 10;
 hots = false;
 virus = false;
 
+
 //Assembly / Dissembly
 dir = 0;
 dissolve_speed = 10;
@@ -51,6 +52,9 @@ fade = 1;
 fade_amt = 0.05;
 spin = 5;
 life = 100;
+
+//Trail
+trail_init();
 </string>
           </argument>
         </arguments>
@@ -97,8 +101,35 @@ life = 100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed = 0;
+            <string>
+trail_destroy();
+speed = 0;
+
 scr_sprite_dissolve(dir, dissolve_speed, chunk_size, shrink, shrink_amt, grav, fade, fade_amt, spin, life);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>trail_calculate(55);
 </string>
           </argument>
         </arguments>
@@ -311,6 +342,28 @@ else
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Tween
+
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="4" ename="objWall">
       <action>
@@ -368,6 +421,34 @@ if (virus)
     objPaddleP1.hP -=1;
     objPaddleAi.hP -= 1;
 }
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Tween
+image_blend=make_color_rgb(255,255,255);
+
+if (!instance_exists(objShake))
+{
+    instance_create(self.x, self.y, objShake);
+}
 </string>
           </argument>
         </arguments>
@@ -397,6 +478,8 @@ if (logicbombVar == true)
     draw_sprite(sprLogicBomb, 0, self.x,self.y);
     draw_text_ext_transformed(self.x-50, self.y-68, string(self.ballDamage), 100, 100, 3, 3, 0);
 }
+
+draw_trail_ext(28,image_blend,-1,1,0.4);
 </string>
           </argument>
         </arguments>

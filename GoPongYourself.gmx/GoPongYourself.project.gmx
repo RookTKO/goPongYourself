@@ -44,6 +44,8 @@
       <sprite>sprites\sprWarpPoints</sprite>
       <sprite>sprites\sprLaser</sprite>
       <sprite>sprites\sprLogicBomb</sprite>
+      <sprite>sprites\sprtween</sprite>
+      <sprite>sprites\sprTweenBall</sprite>
     </sprites>
     <sprites name="Cards">
       <sprite>sprites\sprCardFront</sprite>
@@ -72,6 +74,13 @@
         <script>scripts\scr_Laser_Draw.gml</script>
         <script>scripts\scr_sprite_asymble.gml</script>
         <script>scripts\scr_sprite_dissolve.gml</script>
+        <script>scripts\scr_tweenBallEffect.gml</script>
+        <scripts name="Ball">
+          <script>scripts\draw_trail_ext.gml</script>
+          <script>scripts\trail_init.gml</script>
+          <script>scripts\trail_calculate.gml</script>
+          <script>scripts\trail_destroy.gml</script>
+        </scripts>
       </scripts>
     </scripts>
     <scripts name="Card Scripts">
@@ -88,7 +97,6 @@
       </scripts>
     </scripts>
   </scripts>
-  <fonts name="fonts"/>
   <objects name="objects">
     <objects name="Controls">
       <object>objects\control</object>
@@ -116,6 +124,8 @@
         <object>objects\objDesLaser</object>
         <object>objects\obj_asymble_particle</object>
         <object>objects\obj_dissolve_particle</object>
+        <object>objects\objtweenball</object>
+        <object>objects\objShake</object>
       </objects>
     </objects>
   </objects>
