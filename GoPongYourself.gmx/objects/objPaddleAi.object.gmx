@@ -40,6 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>paddleSpeed = global.game_speed/6;
+image_blend=make_color_rgb(255,166,166);
 
 </string>
           </argument>

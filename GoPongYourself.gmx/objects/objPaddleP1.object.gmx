@@ -40,6 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>primaryPaddle = true;
+image_blend=make_color_rgb(170,255,255);
 </string>
           </argument>
         </arguments>
