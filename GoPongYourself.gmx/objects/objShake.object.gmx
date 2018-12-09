@@ -88,8 +88,8 @@ if trigger = false
     trigger = true;
 }
 
-x_shake = choose(5,-5);
-y_shake = choose(5,-5);
+x_shake = choose(10,-10);
+y_shake = choose(10,-10);
 if x_shake = 0
 {
 x_shake += 1;

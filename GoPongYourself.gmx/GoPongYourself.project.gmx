@@ -53,7 +53,10 @@
       <sprite>sprites\sprCardDeck</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg0</background>
+    <background>background\bg1</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Objects">

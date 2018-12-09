@@ -445,6 +445,9 @@ if (!instance_exists(objShake))
 {
     instance_create(self.x, self.y, objShake);
 }
+
+objMainArea.image_alpha = 0.5;
+objP1CardAreaBG.image_alpha = 0.5;
 </string>
           </argument>
         </arguments>
